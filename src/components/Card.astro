@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  variant?: "col-span-1" | "col-span-2"; // md:col-span-1 md:col-span-2
+  highlighted?: boolean;
+}
+
+const {
+  title,
+  body,
+  variant = "col-span-1",
+  highlighted = false,
+} = Astro.props;
+
+const sectionClasses = highlighted
+  ? "border-pink-500 hover:border-pink-600"
+  : "";
+const h2Classes = highlighted ? "text-pink-500 shadow-pink-500" : "";
+---
+
+<section
+  class={`gap-5 transition-all duration-300 ease-in-out border rounded-lg p-8 shadow hover:shadow-lg md:${variant} ${sectionClasses}`}
+>
+  <h2 class={`text-xl font-bold opacity-80 mb-3 ${h2Classes}`}>{title}</h2>
+  <p class="max-w-[48rem] mr-auto leading-relaxed opacity-60">
+    {body}
+  </p>
+</section>

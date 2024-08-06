@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+const currentYear = 2024;
+---
+
+<header
+  class="max-w-screen-xl mx-auto p-4 sm:p-6 lg:p-8 flex items-center justify-between"
+>
+  <span>{name}™ {currentYear}</span>
+
+  <nav class="flex items-center gap-8">
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>

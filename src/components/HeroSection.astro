@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  buttonText: string;
+  link: string;
+}
+
+const { title, body, buttonText, link } = Astro.props;
+---
+
+<section class="text-center gap-5 px-8 py-48">
+  <h2 class="text-5xl font-bold opacity-80 mb-4">{title}</h2>
+  <p class="text-xl max-w-[32rem] mx-auto leading-relaxed opacity-60">{body}</p>
+  <a
+    class="inline-block mt-12 py-2 px-6 bg-blue-600 text-shadow rounded text-white
+    shadow-md transition-colors duration-300 ease-in-out hover:bg-blue-800"
+    href={link}>{buttonText} <span class="ml-2">→</span></a
+  >
+</section>
