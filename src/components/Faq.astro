@@ -1,5 +1,5 @@
 ---
-import Question from "./Question.tsx";
+import Question from "./Question.tsx"
 
 interface Props {
   title: string;
@@ -7,30 +7,30 @@ interface Props {
   name: string;
 }
 
-const { title, body, name } = Astro.props;
+const {title, body, name} = Astro.props
 
 const questions: { question: string; answer: string[] }[] = [
   {
-    question: `How does ${name} can help my brand?`,
-    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
+    question: `Lorem ipsum dolor sit amet epsum eta?`,
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins"],
   },
   {
-    question: `How does ${name} can help my brand?`,
-    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
+    question: `Lorem ipsum dolor sit amet epsum eta?`,
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins"],
   },
   {
-    question: `How does ${name} can help my brand?`,
-    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
+    question: `Lorem ipsum dolor sit amet epsum eta?`,
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins"],
   },
   {
-    question: `How does ${name} can help my brand?`,
-    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
+    question: `Lorem ipsum dolor sit amet epsum eta?`,
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins"],
   },
   {
-    question: `How does ${name} can help my brand?`,
-    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
+    question: `Lorem ipsum dolor sit amet epsum eta?`,
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins"],
   },
-];
+]
 ---
 
 <section class="gap-5 py-12 px-8">
@@ -43,8 +43,10 @@ const questions: { question: string; answer: string[] }[] = [
 
   <div class="max-w-screen-lg mx-auto flex flex-col">
     {
-      questions.map(({ question, answer }) => (
-        <Question question={question} answer={answer} client:load />
+      questions.map(({question, answer}) => (
+          <Question question={question}
+                    answer={answer}
+                    client:load />
       ))
     }
   </div>
