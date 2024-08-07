@@ -1,58 +1,61 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../layouts/Header.astro";
-import HeroSection from "../components/HeroSection.astro";
-import CardsSection from "../components/CardsSection.astro";
-import Card from "../components/Card.astro";
-import Footer from "../layouts/Footer.astro";
-import Faq from "../components/Faq.astro";
+import Layout from "../layouts/Layout.astro"
+import Header from "../layouts/Header.astro"
+import HeroSection from "../components/HeroSection.astro"
+import CardsSection from "../components/CardsSection.astro"
+import Card from "../components/Card.astro"
+import Footer from "../layouts/Footer.astro"
+import Faq from "../components/Faq.astro"
 
-const name = "Brand Guard";
-const formUrl = "https://tally.so/r/mOL70a";
+const name = "Ballink"
+const email = "ballink@example.com"
+const formUrl = "https://tally.so/r/mOL70a"
 ---
 
-<Layout title={`${name} — Protect your brand online`}>
-  <Header name={name} />
+<Layout title={`${name} — Connect your Club with Players`}>
+  <Header name={name}
+          contactEmail={email} />
 
   <HeroSection
-    title="Protect your brand & products"
-    body="Say goodbye to unlegit copies of your products, metions of your brands, scammers, and more."
-    link={formUrl}
-    buttonText="Protect my brand"
+      title="Lorem ipsum dolor sit amet epsum"
+      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta."
+      link={formUrl}
+      buttonText="I want this"
   />
 
   <CardsSection
-    title="A title to highlight a feature"
-    body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
+      title="A title to highlight a feature"
+      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
   >
     <Card
-      title="A title to highlight a feature"
-      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
-      variant="col-span-2"
-      highlighted
+        title="A title to highlight a feature"
+        body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
+        variant="col-span-2"
+        highlighted
     />
     <Card
-      title="A title to highlight a feature"
-      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
+        title="A title to highlight a feature"
+        body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
     />
     <Card
-      title="A title to highlight a feature"
-      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
+        title="A title to highlight a feature"
+        body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins."
     />
   </CardsSection>
 
   <HeroSection
-    title="Protect your brand"
-    body="Say goodbye to unlegit copies of your products, metions of your brands, scammers, and more."
-    link={formUrl}
-    buttonText="Protect my brand"
+      title="Lorem ipsum dolor"
+      body="Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum."
+      link={formUrl}
+      buttonText="I want this"
   />
 
   <Faq
-    title="Questions & Answers"
-    body="This are some of the most commons questions with the right answer."
-    name={name}
+      title="Questions & Answers"
+      body="This are some of the most commons questions with the right answer."
+      name={name}
   />
 
-  <Footer name={name} />
+  <Footer name={name}
+          contactEmail={email} />
 </Layout>
