@@ -1,4 +1,6 @@
 ---
+import Question from "./Question.tsx";
+
 interface Props {
   title: string;
   body: string;
@@ -7,31 +9,26 @@ interface Props {
 
 const { title, body, name } = Astro.props;
 
-const questions: { question: string; answer: string }[] = [
+const questions: { question: string; answer: string[] }[] = [
   {
     question: `How does ${name} can help my brand?`,
-    answer:
-      "Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
   },
   {
     question: `How does ${name} can help my brand?`,
-    answer:
-      "Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
   },
   {
     question: `How does ${name} can help my brand?`,
-    answer:
-      "Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
   },
   {
     question: `How does ${name} can help my brand?`,
-    answer:
-      "Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
   },
   {
     question: `How does ${name} can help my brand?`,
-    answer:
-      "Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",
+    answer: ["Lorem ipsum dolor sit amet epsum eta ins lorem ipsum dolor ipsum dolor sit amet epsum eta ins lorem ipsum dolor sit amet epsum eta ins sit amet epsum eta ins",],
   },
 ];
 ---
@@ -47,12 +44,7 @@ const questions: { question: string; answer: string }[] = [
   <div class="max-w-screen-lg mx-auto flex flex-col">
     {
       questions.map(({ question, answer }) => (
-        <div class="flex flex-col border-b border-gray-200 py-5 last:border-b-0">
-          <h3 class="text-lg font-bold opacity-80">{question}</h3>
-          <p class="max-w-[42rem] mr-auto leading-relaxed opacity-60 max-h-0 overflow-hidden">
-            {answer}
-          </p>
-        </div>
+        <Question question={question} answer={answer} client:load />
       ))
     }
   </div>
