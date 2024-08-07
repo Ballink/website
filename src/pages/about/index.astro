@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../layouts/Header.astro"
+import HeroSection from "../../components/HeroSection.astro"
+import CardsSection from "../../components/CardsSection.astro"
+import Card from "../../components/Card.astro"
+import Footer from "../../layouts/Footer.astro"
+import Faq from "../../components/Faq.astro"
+
+const name = "Ballink"
+const email = "ballink@example.com"
+const formUrl = "https://tally.so/r/mOL70a"
+---
+
+<Layout title={`${name} — About Us`}>
+  <Header name={name}
+          contactEmail={email} />
+
+  <div>About</div>
+
+  <Footer name={name}
+          contactEmail={email} />
+</Layout>
