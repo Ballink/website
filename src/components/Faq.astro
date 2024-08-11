@@ -45,8 +45,7 @@ const questions: { question: string; answer: string[] }[] = [
     {
       questions.map(({question, answer}) => (
           <Question question={question}
-                    answer={answer}
-                    client:load />
+                    answer={answer} />
       ))
     }
   </div>

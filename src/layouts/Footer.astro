@@ -8,8 +8,8 @@ const {name, contactEmail} = Astro.props
 const currentYear = 2024
 ---
 
-<header
-    class="max-w-screen-xl mx-auto p-4 sm:p-6 lg:p-8 flex items-center justify-between"
+<footer
+    class="mt-12 max-w-screen-xl mx-auto p-4 sm:p-6 lg:p-8 flex items-center justify-between"
 >
   <span>{name}™ {currentYear}</span>
 
@@ -17,4 +17,4 @@ const currentYear = 2024
     <a href="/about">About</a>
     <a href={`mailto:${contactEmail}`}>Contact</a>
   </nav>
-</header>
+</footer>

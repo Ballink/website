@@ -1,11 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../layouts/Header.astro"
-import HeroSection from "../../components/HeroSection.astro"
-import CardsSection from "../../components/CardsSection.astro"
-import Card from "../../components/Card.astro"
 import Footer from "../../layouts/Footer.astro"
-import Faq from "../../components/Faq.astro"
 
 const name = "Ballink"
 const email = "ballink@example.com"
@@ -14,9 +10,31 @@ const formUrl = "https://tally.so/r/mOL70a"
 
 <Layout title={`${name} — About Us`}>
   <Header name={name}
+          earlyAccessLink={formUrl}
           contactEmail={email} />
 
-  <div>About</div>
+  <div class="prose prose-lg mx-auto py-20">
+    <img src="/images/jannes-glas-cuhQcfp3By4-unsplash.jpg"
+         title={`About ${name}`}
+         class="rounded-lg">
+
+    <h2>About {name}</h2>
+
+    <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+      nulla pariatur.</p>
+
+    <p><em>Excepteur sint occaecat cupidatat non proident</em>, sunt in culpa qui officia deserunt mollit anim id est
+      laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+      rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+
+    <p><strong>Nam libero tempore</strong>, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+      maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam
+      et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+      recusandae.</p>
+  </div>
 
   <Footer name={name}
           contactEmail={email} />

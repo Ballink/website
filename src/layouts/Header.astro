@@ -2,9 +2,10 @@
 interface Props {
   name: string;
   contactEmail: string;
+  earlyAccessLink: string;
 }
 
-const {name, contactEmail} = Astro.props
+const {name, contactEmail, earlyAccessLink} = Astro.props
 ---
 
 <header
@@ -12,11 +13,17 @@ const {name, contactEmail} = Astro.props
 >
   <h1>
     <a href="/"
-       class="font-bold opacity-80">{name}</a>
+       class="font-bold opacity-80">
+      <img src="/images/Ballink.png"
+           class="h-4 w-auto"
+           title={name} />
+    </a>
   </h1>
 
   <nav class="flex items-center gap-8">
     <a href="/about">About</a>
     <a href={`mailto:${contactEmail}`}>Contact</a>
+    <a class="py-0.5 px-2 text-blue-600 rounded font-medium hover:text-blue-800 transition duration-200 ease-in-out"
+       href={earlyAccessLink}>Early Access →</a>
   </nav>
 </header>
