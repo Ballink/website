@@ -5,7 +5,6 @@ import react from '@astrojs/react'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ballink.github.io',
-  base: 'landing',
+  site: 'https://ballink.net',
   integrations: [tailwind(), react()],
 })
