@@ -22,8 +22,7 @@ const {name, contactEmail, earlyAccessLink} = Astro.props
 
   <nav class="flex items-center gap-8">
     <a href="/about">About</a>
-    <a class="hidden sm:inline"
-       href={`mailto:${contactEmail}`}>Contact</a>
+    <a href={`mailto:${contactEmail}`}>Contact</a>
     <a class="hidden sm:inline py-0.5 px-2 text-blue-600 rounded font-medium hover:text-blue-800 transition duration-200 ease-in-out"
        href={earlyAccessLink}>Early Access →</a>
   </nav>
